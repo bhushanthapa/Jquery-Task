@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 300px;
+    height: 400px; /* Slider ki fix height */
+    position: relative;
+    overflow: hidden; /* Bahar ka content chhupane ke liye */
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* Yeh line slider ko smooth move karrga*/
+    transition: 0.5s ease-in-out; 
+}
+
+.slide {
+    width: 100%;
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Dots ki styling */
+.dots-area {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    margin: 10px 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #333;
+    transform: scale(1.3);
+}
